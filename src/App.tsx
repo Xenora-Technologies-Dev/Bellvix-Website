@@ -7,11 +7,13 @@ import { CapabilityStrip } from './components/CapabilityStrip'
 import { Contact } from './components/Contact'
 import { CTA } from './components/CTA'
 import { DigitalSection } from './components/DigitalSection'
+import { Faq } from './components/Faq'
 import { Footer } from './components/Footer'
 import { Hero } from './components/Hero'
 import { Navbar } from './components/Navbar'
 import { Outcomes } from './components/Outcomes'
 import { PrivacyPage } from './components/PrivacyPage'
+import { Seo } from './components/Seo'
 import { Services } from './components/Services'
 import { TermsPage } from './components/TermsPage'
 import { WhyBellvix } from './components/WhyBellvix'
@@ -61,6 +63,7 @@ export default function App() {
 
   return (
     <>
+      <Seo />
       <a className="skip-link" href="#main">
         Skip to content
       </a>
@@ -83,6 +86,7 @@ export default function App() {
           <Capabilities />
           <Outcomes />
           <CTA />
+          <Faq />
           <Contact />
         </main>
       )}

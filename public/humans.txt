@@ -1,0 +1,12 @@
+/* TEAM */
+Company: Bellvix Technologies FZE
+Location: Al Shmookh Business Center, One UAQ, UAQ Free Trade Zone, UAE
+Contact: +971 50 180 7814
+Site: https://www.bellvix.com
+
+/* SITE */
+Standards: HTML5, CSS3, ES modules
+Stack: React, TypeScript, Vite, Tailwind CSS
+Fonts: Manrope (Google Fonts)
+Hosting: Netlify
+Last update: 2026-09-29
