@@ -1,4 +1,4 @@
-import { company } from '../config/company'
+import { company, sameAsUrls } from '../config/company'
 import { faqs } from '../data/faqs'
 
 const SITE_URL = 'https://bellvix.com'
@@ -13,6 +13,8 @@ export function Seo() {
     .filter(Boolean)
     .join(', ')
 
+  const sameAs = sameAsUrls()
+
   const organization = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -23,6 +25,7 @@ export function Seo() {
     logo: LOGO_URL,
     image: LOGO_URL,
     telephone: company.phone,
+    sameAs,
     address: {
       '@type': 'PostalAddress',
       streetAddress,
@@ -53,6 +56,7 @@ export function Seo() {
     image: LOGO_URL,
     telephone: company.phone,
     priceRange: '$$',
+    sameAs,
     address: {
       '@type': 'PostalAddress',
       streetAddress,
@@ -102,7 +106,6 @@ export function Seo() {
       },
     })),
   }
-
 
   return (
     <>

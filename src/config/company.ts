@@ -31,7 +31,35 @@ export const company = {
     line3: 'UAQ Free Trade Zone',
     country: 'United Arab Emirates',
   },
+
+  /** Canonical public profiles (no UTM). Used by Footer, SEO sameAs, llms/humans. */
+  social: {
+    instagram: 'https://www.instagram.com/bellvix.tech',
+    linkedin: 'https://www.linkedin.com/company/bellvix-technologies',
+  },
 } as const
+
+export type SocialNetwork = keyof typeof company.social
+
+export const socialLinks = [
+  {
+    network: 'instagram' as const,
+    label: 'Instagram',
+    ariaLabel: 'Bellvix on Instagram',
+    url: company.social.instagram,
+  },
+  {
+    network: 'linkedin' as const,
+    label: 'LinkedIn',
+    ariaLabel: 'Bellvix on LinkedIn',
+    url: company.social.linkedin,
+  },
+] as const
+
+/** URLs for schema.org sameAs and AEO/GEO text files. */
+export function sameAsUrls(): string[] {
+  return socialLinks.map((link) => link.url)
+}
 
 export const hasPhone = company.phone.trim().length > 0
 export const hasEmail = company.email.trim().length > 0
