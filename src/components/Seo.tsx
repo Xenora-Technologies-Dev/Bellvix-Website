@@ -1,7 +1,7 @@
 import { company } from '../config/company'
 import { faqs } from '../data/faqs'
 
-const SITE_URL = 'https://www.bellvix.com'
+const SITE_URL = 'https://bellvix.com'
 const LOGO_URL = `${SITE_URL}/bellvix-logo.png`
 
 function jsonLd(data: unknown): string {

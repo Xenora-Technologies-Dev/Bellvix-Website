@@ -1,4 +1,4 @@
 Contact: tel:+971501807814
 Expires: 2027-09-29T23:59:59.000Z
 Preferred-Languages: en
-Canonical: https://www.bellvix.com/.well-known/security.txt
+Canonical: https://bellvix.com/.well-known/security.txt
