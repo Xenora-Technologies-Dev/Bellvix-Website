@@ -1,63 +1,46 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-AE" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BELLVIX TECHNOLOGIES | IT, Software, AI & Digital Solutions</title>
-    <meta
-      name="description"
-      content="BELLVIX TECHNOLOGIES provides IT consulting, software development, AI software development, AI consulting, branding and digital marketing services from the UAE."
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <!--app-head-->
     <meta name="theme-color" content="#050505" />
     <meta name="color-scheme" content="dark" />
-    <meta name="author" content="BELLVIX TECHNOLOGIES" />
-    <link rel="canonical" href="https://bellvix.com/" />
+    <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="author" href="/humans.txt" />
-
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="BELLVIX TECHNOLOGIES" />
-    <meta property="og:url" content="https://bellvix.com/" />
-    <meta
-      property="og:title"
-      content="BELLVIX TECHNOLOGIES | IT, Software, AI & Digital Solutions"
-    />
-    <meta
-      property="og:description"
-      content="BELLVIX TECHNOLOGIES provides IT consulting, software development, AI software development, AI consulting, branding and digital marketing services from the UAE."
-    />
-    <meta property="og:image" content="https://bellvix.com/bellvix-logo.png" />
-    <meta property="og:locale" content="en_AE" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="BELLVIX TECHNOLOGIES | IT, Software, AI & Digital Solutions"
-    />
-    <meta
-      name="twitter:description"
-      content="BELLVIX TECHNOLOGIES provides IT consulting, software development, AI software development, AI consulting, branding and digital marketing services from the UAE."
-    />
-    <meta name="twitter:image" content="https://bellvix.com/bellvix-logo.png" />
-
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/bellvix-logo.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="alternate" type="application/rss+xml" title="Bellvix Insights (RSS)" href="/insights/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Bellvix Insights (Atom)" href="/insights/atom.xml" />
+    <link rel="alternate" type="text/plain" title="LLM index" href="/llms.txt" />
+    <!--app-preload-->
+    <!--verification-->
+    <!--analytics-->
   </head>
   <body>
-    <div id="root"></div>
-    <noscript>
-      <style>
-        .reveal {
-          opacity: 1 !important;
-          transform: none !important;
-        }
-      </style>
-    </noscript>
-    <script type="module" src="/src/main.tsx"></script>
+    <div id="root"><!--app-html--></div>
+    <!-- Static copies of the site forms so Netlify Forms detects them at deploy time. Not visible. -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="bot-field" />
+      <input name="name" /><input name="email" /><input name="company" /><input name="phone" />
+      <input name="topic" /><textarea name="message"></textarea><input name="page" />
+    </form>
+    <form name="demo" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="demo" />
+      <input name="bot-field" />
+      <input name="name" /><input name="email" /><input name="company" /><input name="phone" />
+      <input name="edition" /><input name="modules" /><textarea name="message"></textarea><input name="page" />
+    </form>
+    <form name="chat-lead" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="chat-lead" />
+      <input name="bot-field" />
+      <input name="name" /><input name="phone" /><input name="email" /><input name="company" />
+      <input name="interest" /><textarea name="message"></textarea><input name="page" /><textarea name="transcript"></textarea>
+    </form>
+    <script type="module" src="/src/entry-client.tsx"></script>
   </body>
 </html>

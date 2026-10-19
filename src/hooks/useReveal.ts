@@ -13,25 +13,17 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(threshold = 0.
   const [visible, setVisible] = useState(true)
 
   useEffect(() => {
-    if (reduced) {
-      setVisible(true)
-      return
-    }
+    if (reduced) return
 
     const node = ref.current
-    if (!node || typeof IntersectionObserver === 'undefined') {
-      setVisible(true)
-      return
-    }
+    if (!node || typeof IntersectionObserver === 'undefined') return
 
-    const hash = window.location.hash.replace('#', '')
-    const jumpedToSection = Boolean(hash) && hash !== 'home' && hash !== 'privacy' && hash !== 'terms'
+    const jumpedToSection = Boolean(window.location.hash)
 
-    if (jumpedToSection || isInViewport(node)) {
-      setVisible(true)
-      return
-    }
+    if (jumpedToSection || isInViewport(node)) return
 
+    // Content renders visible on the server and for no-JS visitors; it is hidden only after hydration.
+    // oxlint-disable-next-line react/set-state-in-effect
     setVisible(false)
 
     const observer = new IntersectionObserver(

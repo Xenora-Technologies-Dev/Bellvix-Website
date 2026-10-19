@@ -1,0 +1,28 @@
+export type Faq = { q: string; a: string }
+export type Link = { label: string; href: string }
+
+export type IconName =
+  | 'compass'
+  | 'code'
+  | 'bot'
+  | 'layers'
+  | 'shield'
+  | 'globe'
+  | 'palette'
+  | 'cpu'
+  | 'message'
+  | 'receipt'
+  | 'users'
+  | 'chart'
+  | 'kanban'
+  | 'sparkles'
+  | 'truck'
+  | 'plug'
+  | 'database'
+  | 'stethoscope'
+  | 'store'
+  | 'briefcase'
+  | 'package'
+  | 'bell'
+  | 'calendar'
+  | 'building'
